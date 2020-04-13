@@ -67,7 +67,7 @@ def main(params):
     logger.info("Supported languages: %s" % ", ".join(model_params.lang2id.keys()))
 
     # update dictionary parameters
-    for name in ['n_words', 'bos_index', 'eos_index', 'pad_index', 'unk_index', 'mask_index']:
+    for name in ['n_words', 'eos_index', 'pad_index', 'unk_index', 'mask_index']:
         setattr(params, name, getattr(model_params, name))
 
     # build dictionary / build encoder / build decoder / reload weights

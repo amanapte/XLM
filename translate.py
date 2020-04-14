@@ -27,9 +27,9 @@ from src.data.dictionary import Dictionary
 from src.model.transformer import TransformerModel
 
 #########################
+from os.path import basename
+from data.dictionary import Dictionary, BOS_WORD, EOS_WORD, PAD_WORD, UNK_WORD, MASK_WORD
 
-from ..data.dictionary import Dictionary, BOS_WORD, EOS_WORD, PAD_WORD, UNK_WORD, MASK_WORD
-sys.path.append("..")
 #########################
 
 

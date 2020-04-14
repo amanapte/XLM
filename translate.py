@@ -29,7 +29,7 @@ from src.model.transformer import TransformerModel
 #########################
 
 from ..data.dictionary import Dictionary, BOS_WORD, EOS_WORD, PAD_WORD, UNK_WORD, MASK_WORD
-
+sys.path.append("..")
 #########################
 
 

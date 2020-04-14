@@ -26,6 +26,12 @@ from src.utils import bool_flag, initialize_exp
 from src.data.dictionary import Dictionary
 from src.model.transformer import TransformerModel
 
+#########################
+
+from ..data.dictionary import Dictionary, BOS_WORD, EOS_WORD, PAD_WORD, UNK_WORD, MASK_WORD
+
+#########################
+
 
 def get_parser():
     """
@@ -67,7 +73,7 @@ def main(params):
     logger.info("Supported languages: %s" % ", ".join(model_params.lang2id.keys()))
 
     # update dictionary parameters
-    for name in ['n_words', 'eos_index', 'pad_index', 'unk_index', 'mask_index']:
+    for name in ['n_words','bos_index', 'eos_index', 'pad_index', 'unk_index', 'mask_index']:
         setattr(params, name, getattr(model_params, name))
 
     # build dictionary / build encoder / build decoder / reload weights
